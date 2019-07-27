@@ -42,7 +42,7 @@ ibmcloud is instance-initialization-values <instance-id> | grep "Password" | sed
 printf "FROM alpine:latest\nRUN apk add openssl" > Dockerfile && docker build -t winpass .
 ```
 9. Executar o container e obter a senha.
-```shell
+```docker
 docker run -it -v $(pwd):/data winpass openssl pkeyutl -in /data/examplepwd64 -decrypt -inkey /data/winpass -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256
 ```
 A senha será exibida no terminal.
