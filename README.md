@@ -1,4 +1,4 @@
-# WindowsVSi
+# Windows VSi
 Procedimento para obter a senha do Windows no ambiente VPC na IBM Cloud.
 
 ### Antes de Começar
